@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useIsFocused } from '@react-navigation/native';
 import useStorage from '../../hooks/useStorage';
 import { PasswordItem } from './components/passwordItem';
-import { Ionicons } from '@expo/vector-icons'
 
 export function Passwords() {
     const [listPasswords, setListPasswords] = useState([]);
@@ -64,15 +63,4 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10
     },
-    icon: {
-        width: 50, // Defina uma largura
-        height: 50, // Defina uma altura
-        backgroundColor: '#392de9', // Adicione uma cor de fundo para contrastar
-        justifyContent: 'center', // Centraliza o conteúdo horizontalmente
-        alignItems: 'center', // Centraliza o conteúdo verticalmente
-        borderRadius: 25, // Para deixar o botão redondo
-        position: 'absolute', // Posiciona o ícone
-        bottom: 20, // Ajuste para posicionar no rodapé, se necessário
-        right: 20, // Ajuste para posicionar no rodapé, se necessário
-    }
 });
