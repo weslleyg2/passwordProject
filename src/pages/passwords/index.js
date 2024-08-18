@@ -19,7 +19,7 @@ export function Passwords() {
     }, [focused]);
 
     async function handleDeletePassword(item) {
-        const passwords = await removeItem('@pass', item.title); // Aqui, você está usando `item.title`, então certifique-se de que não há títulos duplicados
+        const passwords = await removeItem('@pass', item.title); 
         setListPasswords(passwords);
     }
     ;
@@ -32,7 +32,7 @@ export function Passwords() {
             <View style={styles.content}>
                 <FlatList
                     data={listPasswords}
-                    keyExtractor={(item, index) => `${item.title}_${index}`} // Cria uma chave única combinando o título com o índice
+                    keyExtractor={(item, index) => `${item.title}_${index}`}
                     renderItem={({ item }) =>
                         <PasswordItem
                             title={item.title}
