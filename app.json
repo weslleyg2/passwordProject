@@ -1,11 +1,38 @@
 {
   "expo": {
-    "name": "passwordProject",
-    "slug": "passwordProject",
+    "name": "navegationProject",
+    "slug": "navegationProject",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/Icon.png",
+    "splash": {
+      "image": "./src/assets/Icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/Icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourname.passwordProject",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./src/assets/Icon.png"
+    },
     "extra": {
       "eas": {
-        "projectId": "ca17a159-9e05-400e-a655-46da946fd66d"
+        "projectId": "fcde8204-e9f7-45a5-8156-49ca025a5144"
       }
     }
   }

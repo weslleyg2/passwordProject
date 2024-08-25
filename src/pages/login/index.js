@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View, Alert, Modal } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, Alert, Modal, Image } from 'react-native';
 import TouchID from 'react-native-touch-id';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
@@ -77,6 +77,7 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
+      <Image source={require('../../assets/Icon.png')}  style={styles.image}/>
       <Text>Login Page</Text>
       <TouchableOpacity style={styles.button} onPress={authenticate}>
         <Text style={styles.buttonText}>Login with Biometrics</Text>
@@ -172,6 +173,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontSize: 18,
   },
+  image:{
+    marginTop: -150,
+    marginBottom: 50,
+    width: 300,
+    height: 300
+  }
 });
 
 export default Login;
